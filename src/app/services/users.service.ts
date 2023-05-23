@@ -21,7 +21,7 @@ export class UsersService {
 
   AddToCart(cartItem: any, id: any) {
     this.http
-      .put<OrderDetail>('https://localhost:7289/api/Methods/' + id, cartItem)
+      .put<OrderDetail>('https://localhost:7027/api/Methods/' + id, cartItem)
       .pipe(
         map((res: any) => {
           return res;
@@ -35,7 +35,7 @@ export class UsersService {
 
   GetCart(id: any) {
     this.http
-      .get<any>('https://localhost:7289/api/Methods/' + id)
+      .get<any>('https://localhost:7027/api/Methods/' + id)
       .pipe(
         map((res: any) => {
           return res;
@@ -47,7 +47,7 @@ export class UsersService {
         for (let response of res) {
           this.http
             .get<any>(
-              'https://localhost:7289/api/Products/' + response.productId
+              'https://localhost:7027/api/Products/' + response.productId
             )
             .subscribe((productdetail) => {
               this.filteredCartProducts.push(productdetail);
@@ -65,7 +65,7 @@ export class UsersService {
   BuyProducts(BuyerObj: any) {
     BuyerObj.TotalAmount = this.calculateTotalAmount();
     this.http
-      .post('https://localhost:7289/api/Methods/', BuyerObj)
+      .post('https://localhost:7027/api/Methods/', BuyerObj)
       .subscribe((res) => {
         alert('Thanks for the purchase');
         this.route.navigate(['/summary']);

@@ -7,7 +7,7 @@ import { User } from '../models/user';
 })
 export class LoginService {
   //We need to have the url to hit the api
-  private baseURL: string = 'https://localhost:7289/api/Login';
+  private baseURL: string = 'https://localhost:7027/api/Login';
   //We need to inject the httpclient
   constructor(private http: HttpClient) {}
   headers = {
@@ -18,13 +18,13 @@ export class LoginService {
   //
   signUp(userObj: User) {
     return this.http
-      .post<any>('https://localhost:7289/api/Login', userObj)
+      .post<any>('https://localhost:7027/api/Login', userObj)
       .subscribe((res) => {
         console.log(res);
       });
   }
 
   login(loginObj: User) {
-    return this.http.post<any>('https://localhost:7289/api/Login', loginObj);
+    return this.http.post<any>('https://localhost:7027/api/Login', loginObj);
   }
 }

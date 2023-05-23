@@ -4,7 +4,7 @@ export class Product {
   productName!: string;
   mfdDate!: string;
   expDate!: string;
-  ProductImg!: string;
+  productImg!: string;
   price!: number;
   stock!: number;
 }
