@@ -24,13 +24,13 @@ export class ApiService {
       })
     );
   }
-  AddToCart(data: any) {
-    return this.http
-      .put<any>('https://localhost:7027/api/Methods/' + data.productId, data)
-      .pipe(
-        map((res: any) => {
-          return res;
-        })
-      );
-  }
+  // AddToCart(data: any) {
+  //   return this.http
+  //     .put<any>('https://localhost:7027/api/Methods/' + data.productId, data)
+  //     .pipe(
+  //       map((res: any) => {
+  //         return res;
+  //       })
+  //     );
+  // }
 }

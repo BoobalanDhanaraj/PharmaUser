@@ -37,7 +37,7 @@ export class CartFormComponent implements OnInit, OnChanges {
     this.cartItem.productId = this.product.productId;
     this.cartItem.quantity = this.quantity;
     this.cartItem.userId = this.userObj.userId;
-    //this.cartItem.purchaseId = null;
+    this.cartItem.purchaseId != null;
     //this.userObj.AddToCart(this.cartItem);
     this.userObj.AddToCart(this.cartItem, this.product.productId);
   }

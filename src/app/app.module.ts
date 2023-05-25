@@ -16,8 +16,10 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { UserDashboardComponent } from './components/user-dashboard/user-dashboard.component';
 import { CartFormComponent } from './components/cart-form/cart-form.component';
+import { CartComponent } from './components/cart/cart.component';
+import { MainNavComponent } from './components/main-nav/main-nav.component';
 @NgModule({
-  declarations: [AppComponent, DropdownDirectives, HomePageComponent, LoginComponent, SignupComponent, UserDashboardComponent, CartFormComponent],
+  declarations: [AppComponent, DropdownDirectives, HomePageComponent, LoginComponent, SignupComponent, UserDashboardComponent, CartFormComponent, CartComponent, MainNavComponent],
   imports: [
     BrowserModule,
     FormsModule,

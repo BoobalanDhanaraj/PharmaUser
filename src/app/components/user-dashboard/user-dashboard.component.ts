@@ -56,9 +56,9 @@ export class UserDashboardComponent implements OnInit {
     console.log(this.quantity);
     this.userObj.product = product;
     console.log(product);
-    this.route.navigate(['/cart-form']);
+    // this.route.navigate(['/cart-form']);
     this.cartItem.productId = product.productId;
     this.cartItem.userId = this.userObj.userId;
-    console.log(this.userObj.userId);
+    console.log(this.cartItem.userId);
   }
 }

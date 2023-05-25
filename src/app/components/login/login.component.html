@@ -17,22 +17,22 @@
                 <div
                   class="input-field"
                   [class.error]="
-                    loginForm.controls['UserId'].dirty &&
-                    loginForm.hasError('required', 'UserId')
+                    loginForm.controls['UserEmail'].dirty &&
+                    loginForm.hasError('required', 'UserEmail')
                   "
                 >
                   <span class="fa fa-user p-2"></span>
                   <input
-                    type="number"
-                    placeholder="User Id"
-                    formControlName="UserId"
+                    type="string"
+                    placeholder="Email"
+                    formControlName="UserEmail"
                   />
                 </div>
               </div>
               <small
                 *ngIf="
-                  loginForm.controls['UserId'].dirty &&
-                  loginForm.hasError('required', 'UserId')
+                  loginForm.controls['UserEmail'].dirty &&
+                  loginForm.hasError('required', 'UserEmail')
                 "
                 class="text-danger"
                 >*User Id is required</small
